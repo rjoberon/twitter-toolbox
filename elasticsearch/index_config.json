@@ -1,0 +1,333 @@
+{
+   "mappings" : {
+      "tweet" : {
+         "_id" : {
+            "path" : "id"
+         },
+         "_timestamp" : {
+            "enabled" : true,
+            "format" : "EE MMM d HH:mm:ss Z yyyy",
+            "path" : "created_at"
+         },
+         "properties" : {
+            "contributors" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "created_at" : {
+               "format" : "EE MMM d HH:mm:ss Z yyyy",
+               "type" : "date"
+            },
+            "entities.hashtags.text" : {
+               "analyzer" : "hashtag_analyzer",
+               "type" : "string"
+            },
+            "entities.urls.url" : {
+               "analyzer" : "standard",
+               "fields" : {
+                  "hostname" : {
+                     "analyzer" : "hostname_analyzer",
+                     "type" : "string"
+                  }
+               },
+               "type" : "string"
+            },
+            "favorite_count" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "favorited" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "filter_level" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "in_reply_to_status_id_str" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "in_reply_to_user_id_str" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "retweeted_status" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "nested"
+            },
+            "source" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "text" : {
+               "analyzer" : "text_analyzer",
+               "type" : "string"
+            },
+            "truncated" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.contributors_enabled" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.created_at" : {
+               "format" : "EE MMM d HH:mm:ss Z yyyy",
+               "type" : "date"
+            },
+            "user.default_profile" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.default_profile_image" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.description" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.favourites_count" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.follow_request_sent" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.followers_count" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.following" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.friends_count" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.geo_enabled" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.id_str" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.is_translation_enabled" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.is_translator" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.listed_count" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.location" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.notifications" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_background_color" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_background_image_url" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_background_image_url_https" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_background_tile" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_banner_url" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_image_url" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_image_url_https" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_link_color" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_sidebar_border_color" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_sidebar_fill_color" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_text_color" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.profile_use_background_image" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.protected" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.statuses_count" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.time_zone" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.url" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.utc_offset" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            },
+            "user.verified" : {
+               "index" : "no",
+               "store" : false,
+               "type" : "string"
+            }
+         }
+      }
+   },
+   "settings" : {
+      "analysis" : {
+         "analyzer" : {
+            "hashtag_analyzer" : {
+               "filter" : [
+                  "lowercase",
+                  "hashtag_stop"
+               ],
+               "tokenizer" : "keyword",
+               "type" : "custom"
+            },
+            "hostname_analyzer" : {
+               "filter" : [
+                  "capture_hostname_filter"
+               ],
+               "tokenizer" : "keyword",
+               "type" : "custom"
+            },
+            "text_analyzer" : {
+               "filter" : [
+                  "lowercase",
+                  "en_stop",
+                  "de_stop",
+                  "fr_stop",
+                  "es_stop"
+               ],
+               "tokenizer" : "standard",
+               "type" : "custom"
+            }
+         },
+         "filter" : {
+            "capture_hostname_filter" : {
+               "flags" : "CASE_INSENSITIVE",
+               "patterns" : [
+                  "https?://([^/]+)"
+               ],
+               "preserve_original" : false,
+               "type" : "pattern_capture"
+            },
+            "de_stop" : {
+               "stopwords" : "_german_",
+               "type" : "stop"
+            },
+            "en_stop" : {
+               "stopwords" : "_english_",
+               "type" : "stop"
+            },
+            "es_stop" : {
+               "stopwords" : "_spanish_",
+               "type" : "stop"
+            },
+            "fr_stop" : {
+               "stopwords" : "_french_",
+               "type" : "stop"
+            },
+            "hashtag_stop" : {
+               "stopwords" : [
+                  "rt",
+                  "fb",
+                  "ff"
+               ],
+               "type" : "stop"
+            }
+         },
+         "tokenizer" : {
+            "domain_name_tokenizer" : {
+               "delimiter" : ".",
+               "reverse" : true,
+               "type" : "PathHierarchy"
+            }
+         }
+      },
+      "contact_person" : "Jour Name <journame@domain.org>",
+      "number_of_replicas" : 0,
+      "number_of_shards" : 2
+   }
+}
